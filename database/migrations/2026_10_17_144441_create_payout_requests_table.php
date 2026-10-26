@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('payout_requests', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('author_id')->constrained('authors')->cascadeOnDelete();
+            $table->decimal('montant', 12, 2);
+            $table->string('moyen_paiement', 50);
+            $table->text('coordonnees_paiement');
+            $table->string('statut', 50)->default('en_attente');
+            $table->string('reference_transaction')->nullable();
+            $table->text('admin_notes')->nullable();
+            $table->foreignId('validated_by')->nullable()->constrained('users')->nullOnDelete();
+            $table->timestamp('validated_at')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('payout_requests');
+    }
+};

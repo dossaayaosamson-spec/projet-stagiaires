@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+@import 'swiper/css/bundle';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Lora', ui-serif, Georgia, serif;
+
+    --color-agau-blue: #1B6CA8;
+    --color-agau-blue-dark: #0F4A7A;
+    --color-agau-blue-deep: #0A3050;
+    --color-agau-blue-mid: #155986;
+    --color-agau-blue-light: #EAF4FC;
+    --color-agau-off-white: #F8FAFB;
+    --color-agau-text: #1A1A2E;
+    --color-agau-muted: #426374;
+    --color-agau-border: #D0E4F0;
+}
+
+@utility font-lora {
+    font-family: 'Lora', serif;
+}

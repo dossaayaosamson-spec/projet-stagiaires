@@ -1,0 +1,594 @@
+--- ppt/slides/slide1.xml ---
+
+Mémoire de fin d’étude pour l’obtention du diplôme de Licence Professionnelle
+CONCEPTION ET RÉALISATION D'UNE PLATEFORME
+WEB DE GESTION ÉDITORIALE ET DE VENTE DE
+LIVRES NUMÉRIQUES : CAS D'AGAU ÉDITIONS
+T H È M E
+présenté par 
+ 
+KOUTODZO Kodzo Etonam
+Maître de stage
+AMOUSSOU 
+Gaffan
+ 
+Ayéwodé
+ Urbain
+Directeur de  mémoire
+M. AKANATE Alassani 
+Spécialité: Systèmes Informatiques et Logiciels
+1
+
+--- ppt/slides/slide2.xml ---
+
+KOUTODZO Kodzo Etonam
+PLAN DE 
+PRÉSENTATION 
+INTRODUCTION
+PROBLEMATIQUE
+CADRE D’ETUDE ET METHODOLOGIE DE TRAVAIL
+RESULTATS ET INTERPRETATIONS 
+CONCLUSION ET PERSPECTIVE
+2
+
+--- ppt/slides/slide3.xml ---
+
+KOUTODZO Kodzo Etonam
+PLAN
+INTRODUCTION
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+3
+
+--- ppt/slides/slide4.xml ---
+
+INTRODUCTION
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+4
+4
+Le secteur de l'édition africaine connaît une profonde mutation portée par le numérique. Longtemps limité par une distribution physique restreinte et une faible visibilité internationale, il doit aujourd'hui répondre aux attentes de lecteurs en quête d'accessibilité et d'immédiateté.
+KOUTODZO Kodzo Etonam
+
+--- ppt/slides/slide5.xml ---
+
+INTRODUCTION
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+5
+KOUTODZO Kodzo Etonam
+Ce projet propose une plateforme web pour centraliser tout le processus éditorial, de la soumission du manuscrit à la lecture en ligne.
+
+--- ppt/slides/slide6.xml ---
+
+PROBLÉMATIQUE 
+6
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+KOUTODZO Kodzo Etonam
+
+--- ppt/slides/slide7.xml ---
+
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+KOUTODZO Kodzo Etonam
+PROBLÉMATIQUE
+ 
+La gestion éditoriale et commerciale d'AGAU Éditions reposait en partie sur une plateforme web existante devenue inadaptée aux exigences d'un secteur en pleine transformation numérique
+7
+
+--- ppt/slides/slide8.xml ---
+
+PROBLÉMATIQUE - Limites 
+ 
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+KOUTODZO Kodzo Etonam
+Une faible visibilité
+Expérience lecteur limitée
+Une 
+difficulté
+ dans la g
+estion
+ de la ligne 
+éditoriale
+ 
+8
+
+--- ppt/slides/slide9.xml ---
+
+PROBLÉMATIQUE - Limites 
+ 
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+KOUTODZO Kodzo Etonam
+Une faible visibilité
+Une 
+difficulté
+ dans la g
+estion
+ de la ligne 
+éditoriale
+ 
+Expérience lecteur limitée
+9
+
+--- ppt/slides/slide10.xml ---
+
+PROBLÉMATIQUE - Limites 
+ 
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+KOUTODZO Kodzo Etonam
+Une faible visibilité
+Une 
+difficulté
+ dans la g
+estion
+ de la ligne 
+éditoriale
+ 
+Expérience lecteur limitée
+comment centraliser et automatiser la gestion du catalogue, des auteurs et des commandes au sein d'une seule plateforme ?
+comment proposer une expérience 
+utilisateur
+ intuitive,
+ d'achat et de lecture sécurisée aux lecteurs d'AGAU Éditions ?
+10
+
+--- ppt/slides/slide11.xml ---
+
+PROBLÉMATIQUE
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+KOUTODZO Kodzo Etonam
+Une faible visibilité
+Une 
+difficulté
+ dans la g
+estion
+ de la ligne 
+éditoriale
+ 
+Expérience lecteur limitée
+Comment centraliser et automatiser la gestion du catalogue, des auteurs et des commandes au sein d'une seule plateforme ?
+Comment proposer une expérience d'achat et de lecture sécurisée et intuitive aux lecteurs d'AGAU Éditions ?
+11
+
+--- ppt/slides/slide12.xml ---
+
+OBJECTIFS
+ 
+Implémenter
+ une plateforme web de gestion de son activité éditoriale et commerciale de manière numérique, sécurisée et efficace.
+U
+ne plateforme accessible et visible
+Gestion centralisée et automatisée
+Achat et lecture sécurisés et fluides
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+KOUTODZO Kodzo Etonam
+12
+
+--- ppt/slides/slide13.xml ---
+
+CADRE D’ÉTUDE ET MÉTHODOLOGIE 
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+13
+
+--- ppt/slides/slide14.xml ---
+
+CADRE D’ÉTUDE
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+KOUTODZO Kodzo Etonam
+14
+
+--- ppt/slides/slide15.xml ---
+
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+CADRE D’ÉTUDE : AGAU 
+Éditions
+15
+
+--- ppt/slides/slide16.xml ---
+
+MÉTHODOLOGIE DE TRAVAIL
+D
+es discussions et échanges avec la direction 
+g
+énérale
+ et les 
+différents
+ départements 
+D
+es recherches sur Internet 
+Des conceptions et réalisations
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+16
+
+--- ppt/slides/slide17.xml ---
+
+MÉTHODOLOGIE DE TRAVAIL
+UML
+MERISE
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+17
+
+--- ppt/slides/slide18.xml ---
+
+UML
+MERISE
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+MÉTHODOLOGIE DE TRAVAIL
+18
+
+--- ppt/slides/slide19.xml ---
+
+RÉSULTATS 
+DIAGRAMME DE CAS D’UTILISATION
+1
+DIAGRAMME DE CLASSE
+2
+DIAGRAMME DE SÉQUENCE 
+3
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+19
+
+--- ppt/slides/slide20.xml ---
+
+RÉSULTATS
+ 
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+DIAGRAMME DE CAS D’UTILISATION
+1
+DIAGRAMME DE CLASSE
+2
+DIAGRAMME DE SÉQUENCE 
+3
+KOUTODZO Kodzo Etonam
+20
+
+--- ppt/slides/slide21.xml ---
+
+RÉSULTATS
+ 
+DIAGRAMME DE CAS D’UTILISATION
+1
+DIAGRAMME DE CLASSE
+2
+DIAGRAMME DE SÉQUENCE 
+3
+Exprime
+Utilisateur
+Programmeur
+Réalise 
+Testeur
+Vérifie
+Analyste
+Comprend
+Cas d’utilisation
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+21
+
+--- ppt/slides/slide22.xml ---
+
+RÉSULTATS
+ 
+DIAGRAMME DE CAS D’UTILISATION
+1
+DIAGRAMME DE CLASSE
+2
+DIAGRAMME DE SÉQUENCE 
+3
+Acteur
+Un acteur 
+Entité externe qui agit sur le système
+Possède un rôle par rapport au système 
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+22
+
+--- ppt/slides/slide23.xml ---
+
+RÉSULTATS
+ 
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+DIAGRAMME DE CLASSE
+2
+DIAGRAMME DE SÉQUENCE 
+3
+KOUTODZO Kodzo Etonam
+23
+
+--- ppt/slides/slide24.xml ---
+
+RÉSULTATS
+ 
+DIAGRAMME DE CLASSE
+2
+DIAGRAMME DE SÉQUENCE 
+3
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+24
+
+--- ppt/slides/slide25.xml ---
+
+RÉSULTATS
+ 
+DIAGRAMME DE CLASSE
+2
+DIAGRAMME DE SÉQUENCE 
+3
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+25
+
+--- ppt/slides/slide26.xml ---
+
+RÉSULTATS
+ 
+DIAGRAMME DE SÉQUENCE 
+3
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+DIAGRAMME DE CLASSE
+2
+26
+
+--- ppt/slides/slide27.xml ---
+
+RÉSULTATS
+ 
+DIAGRAMME DE SÉQUENCE 
+3
+DIAGRAMME DE CLASSE
+2
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+27
+
+--- ppt/slides/slide28.xml ---
+
+RÉSULTATS
+ 
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+KOUTODZO Kodzo Etonam
+DIAGRAMME DE CLASSE
+2
+28
+
+--- ppt/slides/slide29.xml ---
+
+RÉSULTATS
+ 
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+29
+
+--- ppt/slides/slide30.xml ---
+
+OUTILS
+ 
+DE
+ 
+RÉALISATION
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+30
+
+--- ppt/slides/slide31.xml ---
+
+CAPTURES D’ÉCRAN
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+31
+
+--- ppt/slides/slide32.xml ---
+
+DÉMONSTRATION
+KOUTODZO Kodzo Etonam
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+32
+
+--- ppt/slides/slide33.xml ---
+
+CONCLUSION
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+KOUTODZO Kodzo Etonam
+La réalisation de cette plateforme constitue une réponse concrète aux besoins identifiés dans la gestion éditoriale et la vente de livres numériques : en couvrant l'intégralité du cycle (soumission, vente sécurisée et lecture), elle renforce la sécurité des transactions, la transparence du suivi et la traçabilité des œuvres diffusées. Les tests initiaux ont révélé une amélioration significative des performances et de l’ergonomie, ainsi qu’une meilleure fluidité des échanges entre la maison d’édition, les auteurs et les lecteurs.
+33
+
+--- ppt/slides/slide34.xml ---
+
+PERSPECTIVES
+1
+2
+3
+34
+
+--- ppt/slides/slide35.xml ---
+
+PERSPECTIVES
+1
+Améliorer
+ l'interactivité Livewire et Alpine.js
+2
+3
+35
+
+--- ppt/slides/slide36.xml ---
+
+PERSPECTIVES
+1
+Améliorer
+ l'interactivité Livewire et Alpine.js
+2
+Le développement d'une application mobile native (iOS et Android) 
+3
+36
+
+--- ppt/slides/slide37.xml ---
+
+Le développement d'une application mobile native (iOS et Android) 
+PERSPECTIVES
+1
+Abonnement à un organisateur 
+2
+3
+Un support multilingue
+ 
+37
+
+--- ppt/slides/slide38.xml ---
+
+MERCI POUR VOTRE ATTENTION
+Introduction
+Problématique
+Cadre d’étude et méthodologie 
+Résultats
+Conclusion
+KOUTODZO Kodzo Etonam
+38
+
+--- ppt/slides/slide39.xml ---
+
+Mémoire de fin d’étude pour l’obtention du diplôme de Licence Professionnelle
+CONCEPTION ET RÉALISATION D'UNE PLATEFORME
+WEB DE GESTION ÉDITORIALE ET DE VENTE DE
+LIVRES NUMÉRIQUES : CAS D'AGAU ÉDITIONS
+T H È M E
+présenté par 
+ 
+KOUTODZO Kodzo Etonam
+Maître de stage
+AMOUSSOU 
+Gaffan
+ 
+Ayéwodé
+ Urbain
+Directeur de  mémoire
+M. AKANATE Alassani 
+Spécialité: Systèmes Informatiques et Logiciels
+39

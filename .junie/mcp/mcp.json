@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "C:\\php\\php.exe",
+            "args": [
+                "C:\\Users\\Etonam KOUTODZO\\Desktop\\Stage AGAU Editions\\projet_agau_edition\\artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}
