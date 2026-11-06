@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs><linearGradient id="lagoon" x2="0" y2="1"><stop stop-color="#f0cb8b"/><stop offset=".42" stop-color="#619c8b"/><stop offset="1" stop-color="#214e52"/></linearGradient></defs>
+  <rect width="600" height="900" fill="url(#lagoon)"/>
+  <circle cx="444" cy="249" r="61" fill="#fff0be" opacity=".82"/>
+  <path d="M0 510q150-70 300 0t300 0v390H0z" fill="#28514b"/>
+  <path d="M0 604q150-65 300 0t300 0v296H0z" fill="#3a796d"/>
+  <path d="M79 595V423m36 172V377m397 219V407m-35 189V352" stroke="#493d32" stroke-width="16"/>
+  <g fill="#386e45"><ellipse cx="92" cy="415" rx="88" ry="40"/><ellipse cx="138" cy="380" rx="70" ry="40"/><ellipse cx="470" cy="396" rx="88" ry="40"/><ellipse cx="430" cy="365" rx="74" ry="42"/></g>
+  <path d="M214 620v-96q44-68 88 0v96z" fill="#e9c18a"/>
+  <path d="M209 524l49-57 49 57z" fill="#9b5b43"/>
+  <path d="M255 564h20v56h-20z" fill="#73503e"/>
+  <path d="M36 681q130-35 264 0t264 0" fill="none" stroke="#a9c2a0" stroke-width="4" opacity=".7"/>
+  <rect x="34" y="34" width="532" height="832" fill="none" stroke="#fff1d3" stroke-width="2" opacity=".75"/>
+  <text x="64" y="112" fill="#fff4df" font-family="Georgia,serif" font-size="17" letter-spacing="7">AGAU ÉDITIONS</text>
+  <text x="64" y="720" fill="#fff0d0" font-family="Georgia,serif" font-size="49" font-weight="bold">Les Jardins</text>
+  <text x="64" y="779" fill="#fff0d0" font-family="Georgia,serif" font-size="49" font-weight="bold">de la lagune</text>
+  <text x="64" y="833" fill="#fff4df" font-family="Arial,sans-serif" font-size="18" letter-spacing="2">JEAN-BAPTISTE KONAN</text>
+</svg>

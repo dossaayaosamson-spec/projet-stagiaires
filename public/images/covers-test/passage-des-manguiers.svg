@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#f2bc6b"/><stop offset="1" stop-color="#b84937"/></linearGradient>
+    <linearGradient id="ground" x2="0" y2="1"><stop stop-color="#a44d35"/><stop offset="1" stop-color="#402d34"/></linearGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#sky)"/>
+  <circle cx="430" cy="275" r="95" fill="#ffe5a0" opacity=".8"/>
+  <path d="M0 560Q130 460 260 555T600 505V900H0Z" fill="url(#ground)"/>
+  <path d="M95 665h34V385h-34zm-38-244q55-125 110 0-54 70-110 0m-20 89q58-116 122 1-59 70-122-1m240 160h28V345h-28zm-43-229q57-132 114 0-58 76-114 0m-15 93q57-118 116 0-58 70-116 0" fill="#294a3b"/>
+  <path d="M0 748q170-55 300 0t300-4v156H0Z" fill="#293d35" opacity=".8"/>
+  <rect x="34" y="34" width="532" height="832" fill="none" stroke="#ffe8b5" stroke-width="2" opacity=".7"/>
+  <text x="64" y="112" fill="#fff3d4" font-family="Georgia,serif" font-size="17" letter-spacing="7">AGAU ÉDITIONS</text>
+  <text x="64" y="570" fill="#fff4dd" font-family="Georgia,serif" font-size="52" font-weight="bold">Le Passage</text>
+  <text x="64" y="632" fill="#fff4dd" font-family="Georgia,serif" font-size="52" font-weight="bold">des manguiers</text>
+  <path d="M64 665h120" stroke="#f4c778" stroke-width="3"/>
+  <text x="64" y="811" fill="#fff3d4" font-family="Arial,sans-serif" font-size="23" letter-spacing="3">AMINATA DIALLO</text>
+</svg>

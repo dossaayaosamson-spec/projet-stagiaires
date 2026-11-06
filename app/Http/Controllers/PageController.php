@@ -8,6 +8,7 @@ use App\Models\Event;
 use App\Models\ShortStory;
 use App\Models\Slide;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 
 class PageController extends Controller
@@ -36,12 +37,23 @@ class PageController extends Controller
         });
 
         $bestSellers = Cache::remember('welcome_bestsellers', $cacheDuration, function () {
-            return Book::with('author')->where('is_bestseller', true)->take(4)->get();
+            return Book::with('author')
+                ->withAvg('ratings', 'rating')
+                ->withCount('ratings')
+                ->where('is_bestseller', true)
+                ->take(4)
+                ->get();
         });
 
-        $latestBooks = Cache::remember('welcome_latest_books', $cacheDuration, function () {
-            return Book::with('author')->latest()->take(5)->get();
-        });
+        $latestBooks = Book::with('author')
+            ->withAvg('ratings', 'rating')
+            ->withCount('ratings')
+            ->latest()
+            ->take(5)
+            ->get();
+        $userRatings = Auth::check()
+            ? Auth::user()->bookRatings()->whereIn('book_id', $latestBooks->modelKeys())->get()->keyBy('book_id')
+            : collect();
 
         $authors = Cache::remember('welcome_authors', $cacheDuration, function () {
             return Author::withCount('books')->take(3)->get(); // Limiter à 3 pour l'affichage (md:grid-cols-3)
@@ -77,6 +89,7 @@ class PageController extends Controller
             'books' => collect(), // Rétrocompatibilité si d'autres vues l'utilisaient de cette manière, mais on va plutôt modifier la vue !
             'bestSellers' => $bestSellers,
             'latestBooks' => $latestBooks,
+            'userRatings' => $userRatings,
             'authors' => $authors,
             'stories' => $stories,
             'featuredBook' => $featuredBook,

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs><linearGradient id="night" x2="0" y2="1"><stop stop-color="#292344"/><stop offset="1" stop-color="#8f4e62"/></linearGradient></defs>
+  <rect width="600" height="900" fill="url(#night)"/>
+  <g fill="#f7d994"><circle cx="110" cy="215" r="4"/><circle cx="205" cy="160" r="5"/><circle cx="395" cy="218" r="4"/><circle cx="505" cy="162" r="5"/><circle cx="460" cy="330" r="3"/><circle cx="135" cy="340" r="3"/></g>
+  <path d="M72 548h456v221H72z" fill="#554050"/>
+  <path d="M55 548l245-126 245 126z" fill="#bd765e"/>
+  <path d="M93 587h102v182H93zm133 0h102v182H226zm133 0h102v182H359z" fill="#e0a96f"/>
+  <path d="M100 640h90m46 0h90m46 0h90" stroke="#704759" stroke-width="12"/>
+  <path d="M65 770h470v38H65z" fill="#302b40"/>
+  <path d="M100 805h80m35 0h80m35 0h80m35 0h50" stroke="#f3c375" stroke-width="5"/>
+  <rect x="34" y="34" width="532" height="832" fill="none" stroke="#ffe8c2" stroke-width="2" opacity=".75"/>
+  <text x="64" y="112" fill="#fff1d7" font-family="Georgia,serif" font-size="17" letter-spacing="7">AGAU ÉDITIONS</text>
+  <text x="64" y="354" fill="#fff0d2" font-family="Georgia,serif" font-size="52" font-weight="bold">Le Marché</text>
+  <text x="64" y="416" fill="#fff0d2" font-family="Georgia,serif" font-size="52" font-weight="bold">des étoiles</text>
+  <path d="M64 447h120" stroke="#f7d994" stroke-width="3"/>
+  <text x="64" y="811" fill="#fff1d7" font-family="Arial,sans-serif" font-size="23" letter-spacing="3">AMINATA DIALLO</text>
+</svg>

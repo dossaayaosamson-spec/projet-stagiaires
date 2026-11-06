@@ -40,13 +40,17 @@ class Book extends Model
     /**
      * URL de la couverture
      */
-    public function getCoverUrlAttribute()
+    public function getCoverUrlAttribute(): ?string
     {
-        if ($this->cover_path) {
-            return asset('storage/'.$this->cover_path);
+        if (! $this->cover_path) {
+            return null;
         }
 
-        return null;
+        if (Str::startsWith($this->cover_path, 'images/covers-test/')) {
+            return asset($this->cover_path);
+        }
+
+        return asset('storage/'.$this->cover_path);
     }
 
     /**
@@ -84,6 +88,11 @@ class Book extends Model
     public function author()
     {
         return $this->belongsTo(Author::class);
+    }
+
+    public function ratings()
+    {
+        return $this->hasMany(BookRating::class);
     }
 
     public function contracts()

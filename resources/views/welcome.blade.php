@@ -367,9 +367,7 @@
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[24px]">
         @foreach($latestBooks as $book)
-          <a href="{{ route('front.livres.show', $book->frontRouteParams()) }}">
-            <x-book-card :book="$book" />
-          </a>
+          <x-book-card :book="$book" :user-rating="$userRatings->get($book->id)" />
         @endforeach
       </div>
     </section>

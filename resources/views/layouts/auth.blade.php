@@ -55,6 +55,9 @@
     </div>
 
     @include('partials.legal-modals')
+    @if(in_array(request()->route()?->getName(), ['login', 'register'], true))
+        @include('components.catalogue-assistant')
+    @endif
     @stack('scripts')
 </body>
 </html>

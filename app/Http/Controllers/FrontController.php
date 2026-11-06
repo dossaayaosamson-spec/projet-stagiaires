@@ -20,28 +20,34 @@ class FrontController extends Controller
 {
     public function catalogue(Request $request)
     {
-        $page = $request->input('page', 1);
-        $filter = $request->input('filter', 'all');
-        $cacheKey = 'front_catalogue_page_'.$page.'_filter_'.$filter;
+        $query = Book::with('author')
+            ->withAvg('ratings', 'rating')
+            ->withCount('ratings')
+            ->latest();
 
-        $books = Cache::remember($cacheKey, 1440, function () use ($request) {
-            $query = Book::with('author')->latest();
+        if ($request->has('filter') && $request->input('filter') === 'bestseller') {
+            $query->where('is_bestseller', true);
+        }
 
-            if ($request->has('filter') && $request->input('filter') === 'bestseller') {
-                $query->where('is_bestseller', true);
-            }
+        $books = $query->paginate(12);
+        $userRatings = Auth::check()
+            ? Auth::user()->bookRatings()->whereIn('book_id', $books->getCollection()->modelKeys())->get()->keyBy('book_id')
+            : collect();
 
-            return $query->paginate(12);
-        });
-
-        return view('front.catalogue', compact('books'));
+        return view('front.catalogue', compact('books', 'userRatings'));
     }
 
     public function showBook($id)
     {
-        $book = Book::with('author')->findOrFail($id);
+        $book = Book::with('author')
+            ->withAvg('ratings', 'rating')
+            ->withCount('ratings')
+            ->findOrFail($id);
+        $userRating = Auth::check()
+            ? Auth::user()->bookRatings()->where('book_id', $book->id)->first()
+            : null;
 
-        return view('front.books.show', compact('book'));
+        return view('front.books.show', compact('book', 'userRating'));
     }
 
     public function authorsIndex()

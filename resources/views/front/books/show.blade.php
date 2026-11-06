@@ -108,6 +108,56 @@
         font-weight: 500;
         letter-spacing: 0.5px;
     }
+
+    .book-rating-panel {
+        background: rgba(255,255,255,0.65);
+        border: 1px solid rgba(27,108,168,0.12);
+        border-radius: 10px;
+        padding: 18px;
+        margin-bottom: 24px;
+    }
+
+    .book-rating-stars {
+        color: #b8c0c8;
+        font-size: 1.35rem;
+        letter-spacing: 2px;
+    }
+
+    .book-rating-stars .is-filled {
+        color: #d49b20;
+    }
+
+    .rating-input {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 5px;
+    }
+
+    .rating-input input {
+        position: absolute;
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+    }
+
+    .rating-input label {
+        color: #b8c0c8;
+        cursor: pointer;
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+
+    .rating-input input:checked ~ label,
+    .rating-input label:hover,
+    .rating-input label:hover ~ label {
+        color: #d49b20;
+    }
+
+    .rating-input input:focus-visible + label {
+        outline: 2px solid #1B6CA8;
+        outline-offset: 3px;
+    }
     
     .info-grid {
         display: grid;
@@ -334,6 +384,61 @@
                 <div class="book-info-panel">
                     <h1 class="book-title-main">{{ $book->titre }}</h1>
                     <p class="book-author-sub">par <a href="{{ route('front.auteurs.show', $book->author?->frontRouteParams() ?? ['id' => $book->author_id, 'slug' => 'auteur']) }}" style="color: #1B6CA8; text-decoration: underline;">{{ $book->author->nom ?? 'Auteur inconnu' }}</a></p>
+
+                    @php
+                        $averageRating = (float) ($book->ratings_avg_rating ?? 0);
+                    @endphp
+                    <section class="book-rating-panel" aria-labelledby="book-rating-title">
+                        <h2 id="book-rating-title" class="font-bold text-agau-text mb-1">Notes des lecteurs</h2>
+                        <div class="flex items-center gap-2">
+                            <span class="book-rating-stars" aria-label="Note moyenne : {{ number_format($averageRating, 1, ',', ' ') }} sur 5">
+                                @for($star = 1; $star <= 5; $star++)
+                                    <span class="{{ $star <= round($averageRating) ? 'is-filled' : '' }}" aria-hidden="true">&#9733;</span>
+                                @endfor
+                            </span>
+                            <span class="text-sm text-agau-muted">
+                                {{ number_format($averageRating, 1, ',', ' ') }}/5 · {{ $book->ratings_count }} {{ $book->ratings_count === 1 ? 'note' : 'notes' }}
+                            </span>
+                        </div>
+
+                        @auth
+                            <form method="POST" action="{{ route($userRating ? 'front.ratings.update' : 'front.ratings.store', $book->id) }}" class="mt-4">
+                                @csrf
+                                @if($userRating)
+                                    @method('PUT')
+                                @endif
+                                <fieldset>
+                                    <legend class="text-sm font-semibold text-agau-text mb-2">
+                                        {{ $userRating ? 'Modifier votre note' : 'Donner une note' }}
+                                    </legend>
+                                    <div class="rating-input" role="radiogroup" aria-label="Votre note sur 5">
+                                        @for($star = 5; $star >= 1; $star--)
+                                            <input type="radio" id="book-rating-{{ $book->id }}-{{ $star }}" name="rating" value="{{ $star }}" @checked((int) old('rating', $userRating?->rating ?? 5) === $star) required>
+                                            <label for="book-rating-{{ $book->id }}-{{ $star }}" aria-label="{{ $star }} {{ $star === 1 ? 'étoile' : 'étoiles' }}">&#9733;</label>
+                                        @endfor
+                                    </div>
+                                    @error('rating')
+                                        <p class="text-sm text-red-700 mt-2">{{ $message }}</p>
+                                    @enderror
+                                    <button type="submit" class="mt-3 bg-agau-blue text-white px-4 py-2 rounded-[6px] text-sm font-bold hover:bg-agau-blue-dark">
+                                        {{ $userRating ? 'Enregistrer la modification' : 'Publier ma note' }}
+                                    </button>
+                                </fieldset>
+                            </form>
+
+                            @if($userRating)
+                                <form method="POST" action="{{ route('front.ratings.destroy', $book->id) }}" class="mt-2">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-sm text-agau-muted underline">Supprimer ma note</button>
+                                </form>
+                            @endif
+                        @else
+                            <p class="mt-3 text-sm text-agau-muted">
+                                <a href="{{ route('login') }}" class="text-agau-blue underline">Connectez-vous</a> pour noter ce livre.
+                            </p>
+                        @endauth
+                    </section>
                     
                     <div class="info-grid">
                         <div class="info-box">

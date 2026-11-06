@@ -160,6 +160,11 @@ class User extends Authenticatable implements MustVerifyEmail
             ->withTimestamps();
     }
 
+    public function bookRatings()
+    {
+        return $this->hasMany(BookRating::class);
+    }
+
     // Alias pour booksProgress()
     public function readers()
     {

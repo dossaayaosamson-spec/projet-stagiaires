@@ -53,6 +53,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @include('partials.legal-modals')
 
+    @if(in_array(request()->route()?->getName(), ['home', 'front.catalogue', 'front.livres.show', 'front.stories.index', 'front.stories.show'], true))
+        @include('components.catalogue-assistant')
+    @endif
+
     @stack('scripts')
     @auth
     <script>

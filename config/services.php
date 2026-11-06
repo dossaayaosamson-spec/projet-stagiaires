@@ -40,6 +40,10 @@ return [
         'environment' => env('FEDAPAY_ENVIRONMENT', 'sandbox'),
         'webhook_secret' => env('FEDAPAY_WEBHOOK_SECRET'),
     ],
+    'openai' => [
+        'api_key' => env('OPENAI_API_KEY'),
+        'model' => env('OPENAI_MODEL', 'gpt-5.4-mini'),
+    ],
     'django' => [
         'url' => env('DJANGO_API_URL', 'https://agaueditions-ia.saeicubetech.com'),
     ],

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs><linearGradient id="water" x2="0" y2="1"><stop stop-color="#f0c888"/><stop offset=".48" stop-color="#4c9693"/><stop offset="1" stop-color="#153f56"/></linearGradient></defs>
+  <rect width="600" height="900" fill="url(#water)"/>
+  <circle cx="173" cy="300" r="74" fill="#fff1ce" opacity=".85"/>
+  <path d="M0 510q100-32 200 0t200 0 200 0v58q-100-32-200 0t-200 0T0 568zm0 180q150-35 300 0t300 0v22q-150-35-300 0T0 712z" fill="#d4e4cc" opacity=".65"/>
+  <path d="M0 750q180-40 340 0t260 0v150H0Z" fill="#17394c"/>
+  <path d="M410 590q54-75 108 0l-54 22z" fill="#f3d9a5"/>
+  <path d="M464 604v98" stroke="#f3d9a5" stroke-width="5"/>
+  <rect x="34" y="34" width="532" height="832" fill="none" stroke="#fff1d2" stroke-width="2" opacity=".75"/>
+  <text x="64" y="112" fill="#fff7e4" font-family="Georgia,serif" font-size="17" letter-spacing="7">AGAU ÉDITIONS</text>
+  <text x="64" y="327" fill="#17394c" font-family="Georgia,serif" font-size="52" font-weight="bold">Les Rivages</text>
+  <text x="64" y="389" fill="#17394c" font-family="Georgia,serif" font-size="52" font-weight="bold">du silence</text>
+  <path d="M64 421h120" stroke="#fff1d2" stroke-width="3"/>
+  <text x="64" y="811" fill="#fff7e4" font-family="Arial,sans-serif" font-size="23" letter-spacing="3">AMINATA DIALLO</text>
+</svg>

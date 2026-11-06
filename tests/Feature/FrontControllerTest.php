@@ -15,6 +15,17 @@ class FrontControllerTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function test_book_cover_url_supports_test_covers_and_existing_storage_paths(): void
+    {
+        $testCover = Book::make(['cover_path' => 'images/covers-test/example.svg']);
+        $storedCover = Book::make(['cover_path' => 'covers/example.jpg']);
+        $missingCover = Book::make(['cover_path' => null]);
+
+        $this->assertSame(asset('images/covers-test/example.svg'), $testCover->cover_url);
+        $this->assertSame(asset('storage/covers/example.jpg'), $storedCover->cover_url);
+        $this->assertNull($missingCover->cover_url);
+    }
+
     public function test_catalogue_page_works(): void
     {
         $author = Author::factory()->create();
@@ -24,6 +35,23 @@ class FrontControllerTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertViewIs('front.catalogue');
+    }
+
+    public function test_test_cover_is_rendered_in_catalogue_and_book_details(): void
+    {
+        $author = Author::factory()->create();
+        $book = Book::factory()->create([
+            'author_id' => $author->id,
+            'cover_path' => 'images/covers-test/example.svg',
+        ]);
+
+        $this->get(route('front.catalogue'))
+            ->assertOk()
+            ->assertSee($book->cover_url, false);
+
+        $this->get(route('front.livres.show', $book->frontRouteParams()))
+            ->assertOk()
+            ->assertSee($book->cover_url, false);
     }
 
     public function test_catalogue_page_with_filter_works(): void

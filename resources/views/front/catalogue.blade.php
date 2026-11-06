@@ -168,7 +168,9 @@
                             </div>
                             
                             <div class="p-[20px] flex flex-col flex-1">
-                                <h3 class="text-[1rem] font-bold text-agau-text leading-[1.3] m-0 mb-[6px] line-clamp-2 min-h-[2.6em]">{{ $book->titre }}</h3>
+                                <h3 class="text-[1rem] font-bold text-agau-text leading-[1.3] m-0 mb-[1px] line-clamp-2 min-h-[2.6em]">{{ $book->titre }}</h3>
+
+                                <x-book-rating :book="$book" :user-rating="$userRatings->get($book->id)" />
                                 <p class="text-[0.75rem] font-medium text-agau-muted mb-[12px] m-0">{{ $book->author->nom ?? 'Inconnu' }}</p>
                                 
                                 <p class="text-[0.8rem] text-agau-muted mb-[24px] line-clamp-2 flex-1">{{ $book->resume }}</p>

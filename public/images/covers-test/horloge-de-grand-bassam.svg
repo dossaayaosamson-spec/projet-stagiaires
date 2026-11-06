@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs><linearGradient id="wall" x2="0" y2="1"><stop stop-color="#e4b979"/><stop offset="1" stop-color="#81513d"/></linearGradient></defs>
+  <rect width="600" height="900" fill="#d6b384"/>
+  <path d="M0 0h600v600H0z" fill="url(#wall)"/>
+  <path d="M0 600h600v300H0z" fill="#28536a"/>
+  <path d="M0 644q150-42 300 0t300 0M0 720q150-42 300 0t300 0M0 796q150-42 300 0t300 0" fill="none" stroke="#75a4a4" stroke-width="5" opacity=".6"/>
+  <path d="M193 552V178h214v374m-250 0h286v30H157z" fill="#684938"/>
+  <path d="M215 530V201h170v329z" fill="#f0d7a9"/>
+  <circle cx="300" cy="325" r="69" fill="#f9edcf" stroke="#493a32" stroke-width="10"/>
+  <path d="M300 269v59l39 25M300 248v12m0 130v12m-77-77h12m130 0h12" fill="none" stroke="#493a32" stroke-width="7" stroke-linecap="round"/>
+  <rect x="34" y="34" width="532" height="832" fill="none" stroke="#fff0d2" stroke-width="2" opacity=".8"/>
+  <text x="64" y="112" fill="#fff4db" font-family="Georgia,serif" font-size="17" letter-spacing="7">AGAU ÉDITIONS</text>
+  <text x="64" y="682" fill="#fff2d6" font-family="Georgia,serif" font-size="44" font-weight="bold">L'Horloge de</text>
+  <text x="64" y="737" fill="#fff2d6" font-family="Georgia,serif" font-size="44" font-weight="bold">Grand-Bassam</text>
+  <text x="64" y="811" fill="#fff4db" font-family="Arial,sans-serif" font-size="20" letter-spacing="2">JEAN-BAPTISTE KONAN</text>
+</svg>

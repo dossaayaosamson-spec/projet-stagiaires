@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs><linearGradient id="dusk" x2="0" y2="1"><stop stop-color="#e6a76c"/><stop offset=".58" stop-color="#657d55"/><stop offset="1" stop-color="#253f36"/></linearGradient></defs>
+  <rect width="600" height="900" fill="url(#dusk)"/>
+  <circle cx="445" cy="230" r="58" fill="#ffe4aa" opacity=".75"/>
+  <path d="M246 684h95L325 421h-64z" fill="#634832"/>
+  <path d="M286 465q-104-20-125-114 91-25 129 62-8-112 52-167 52 73 4 175 68-87 145-47-10 99-139 116z" fill="#385a3d"/>
+  <path d="M0 700q170-50 320 0t280 0v200H0z" fill="#243b32"/>
+  <path d="M80 766q40-36 80 0m-12 0q42-40 84 0m214-5q39-36 78 0" fill="none" stroke="#c4a06b" stroke-width="4" opacity=".8"/>
+  <rect x="34" y="34" width="532" height="832" fill="none" stroke="#fff0d1" stroke-width="2" opacity=".75"/>
+  <text x="64" y="112" fill="#fff4dc" font-family="Georgia,serif" font-size="17" letter-spacing="7">AGAU ÉDITIONS</text>
+  <text x="64" y="611" fill="#fff2d5" font-family="Georgia,serif" font-size="48" font-weight="bold">La Mémoire</text>
+  <text x="64" y="669" fill="#fff2d5" font-family="Georgia,serif" font-size="48" font-weight="bold">des baobabs</text>
+  <path d="M64 699h120" stroke="#e8bd7d" stroke-width="3"/>
+  <text x="64" y="811" fill="#fff4dc" font-family="Arial,sans-serif" font-size="23" letter-spacing="3">FATIMA OUÉDRAOGO</text>
+</svg>

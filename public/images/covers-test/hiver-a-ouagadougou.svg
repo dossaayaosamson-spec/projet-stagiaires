@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs><linearGradient id="city" x2="0" y2="1"><stop stop-color="#322c55"/><stop offset=".6" stop-color="#a75c63"/><stop offset="1" stop-color="#e1a56f"/></linearGradient></defs>
+  <rect width="600" height="900" fill="url(#city)"/>
+  <circle cx="465" cy="256" r="64" fill="#f4d294" opacity=".75"/>
+  <path d="M0 625h82V430h92v195h61V365h96v260h66V474h90v151h113v275H0z" fill="#3c354f"/>
+  <path d="M0 740q110-26 220 0t220 0 160 0v160H0z" fill="#292b43"/>
+  <path d="M102 500h42m-42 52h42m126-115h45m-45 54h45m98 41h36" stroke="#f1bf79" stroke-width="9"/>
+  <path d="M0 678h600" stroke="#f0bd83" stroke-width="3" opacity=".7"/>
+  <rect x="34" y="34" width="532" height="832" fill="none" stroke="#f8dfbb" stroke-width="2" opacity=".75"/>
+  <text x="64" y="112" fill="#fff1d7" font-family="Georgia,serif" font-size="17" letter-spacing="7">AGAU ÉDITIONS</text>
+  <text x="64" y="305" fill="#fff1d7" font-family="Georgia,serif" font-size="50" font-weight="bold">Un hiver à</text>
+  <text x="64" y="365" fill="#fff1d7" font-family="Georgia,serif" font-size="50" font-weight="bold">Ouagadougou</text>
+  <path d="M64 397h120" stroke="#f1bf79" stroke-width="3"/>
+  <text x="64" y="811" fill="#fff1d7" font-family="Arial,sans-serif" font-size="23" letter-spacing="3">FATIMA OUÉDRAOGO</text>
+</svg>

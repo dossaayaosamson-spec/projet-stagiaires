@@ -5,9 +5,11 @@
 use App\Http\Controllers\Admin\BookController;
 use App\Http\Controllers\Admin\CandidatureEclaAdminController;
 use App\Http\Controllers\Admin\CommentModerationController;
+use App\Http\Controllers\Admin\ContractAdminController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\ManuscriptAdminController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\PayoutAdminController;
 use App\Http\Controllers\Admin\ShortStoryController;
 use App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\Admin\UserController;
@@ -16,6 +18,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AuthorAIController;
 use App\Http\Controllers\AuthorApplicationController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\BookRatingController;
 use App\Http\Controllers\CandidatureEclaController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ClientController;
@@ -32,6 +35,7 @@ use App\Http\Controllers\PasswordResetController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PaymentDocumentController;
 use App\Http\Controllers\ProgressController;
+use App\Http\Controllers\PublicCatalogueAssistantController;
 use App\Http\Controllers\ReadController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ShortStoryPaymentController;
@@ -55,6 +59,14 @@ Route::get('/clear-cache', function () {
 Route::get('/', [PageController::class, 'welcome'])->name('home');
 Route::get('/catalogue', [FrontController::class, 'catalogue'])->name('front.catalogue');
 Route::get('/livres/{id}/{slug?}', [FrontController::class, 'showBook'])->name('front.livres.show');
+Route::post('/assistant/catalogue', PublicCatalogueAssistantController::class)
+    ->middleware('throttle:10,1')
+    ->name('public-assistant.ask');
+Route::middleware(['auth', 'not-suspended'])->prefix('/livres/{book}/notes')->name('front.ratings.')->group(function () {
+    Route::post('/', [BookRatingController::class, 'store'])->name('store');
+    Route::put('/', [BookRatingController::class, 'update'])->name('update');
+    Route::delete('/', [BookRatingController::class, 'destroy'])->name('destroy');
+});
 Route::get('/auteurs', [FrontController::class, 'authorsIndex'])->name('front.auteurs.index');
 Route::get('/auteurs/{id}/{slug?}', [FrontController::class, 'showAuthor'])->name('front.auteurs.show');
 Route::get('/short-stories', [FrontController::class, 'storiesIndex'])->name('front.stories.index');
@@ -265,13 +277,13 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('manuscripts/{manuscript}/download', [ManuscriptAdminController::class, 'download'])->name('manuscripts.download');
 
     // Contrats d'édition
-    Route::resource('contracts', \App\Http\Controllers\Admin\ContractAdminController::class);
-    Route::get('contracts/{contract}/download', [\App\Http\Controllers\Admin\ContractAdminController::class, 'downloadPdf'])->name('contracts.download');
+    Route::resource('contracts', ContractAdminController::class);
+    Route::get('contracts/{contract}/download', [ContractAdminController::class, 'downloadPdf'])->name('contracts.download');
 
     // Versements Auteurs (Payouts)
-    Route::get('payouts', [\App\Http\Controllers\Admin\PayoutAdminController::class, 'index'])->name('payouts.index');
-    Route::post('payouts/{payout}/approve', [\App\Http\Controllers\Admin\PayoutAdminController::class, 'approve'])->name('payouts.approve');
-    Route::post('payouts/{payout}/reject', [\App\Http\Controllers\Admin\PayoutAdminController::class, 'reject'])->name('payouts.reject');
+    Route::get('payouts', [PayoutAdminController::class, 'index'])->name('payouts.index');
+    Route::post('payouts/{payout}/approve', [PayoutAdminController::class, 'approve'])->name('payouts.approve');
+    Route::post('payouts/{payout}/reject', [PayoutAdminController::class, 'reject'])->name('payouts.reject');
 
     // Validation et gestion des paiements
     Route::post('orders/{order}/confirm', [OrderController::class, 'approveProof'])->name('orders.approve');

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs><linearGradient id="dawn" x2="0" y2="1"><stop stop-color="#314c76"/><stop offset=".47" stop-color="#e49a72"/><stop offset="1" stop-color="#235a68"/></linearGradient></defs>
+  <rect width="600" height="900" fill="url(#dawn)"/>
+  <circle cx="300" cy="405" r="88" fill="#ffe0a2" opacity=".85"/>
+  <path d="M0 525q150-28 300 0t300 0v375H0z" fill="#255665"/>
+  <path d="M0 600q150-25 300 0t300 0m-600 90q150-25 300 0t300 0m-600 85q150-25 300 0t300 0" fill="none" stroke="#89b8ac" stroke-width="4" opacity=".55"/>
+  <path d="M122 652q88 50 176 0l-22 27H145z" fill="#392f37"/>
+  <path d="M211 638V480l-2 0z" fill="#f5d6a0" stroke="#f5d6a0" stroke-width="5"/>
+  <path d="M216 488l83 137h-83z" fill="#f5d6a0" opacity=".85"/>
+  <path d="M355 742q67 35 134 0l-18 22h-99z" fill="#392f37"/>
+  <rect x="34" y="34" width="532" height="832" fill="none" stroke="#fff0d5" stroke-width="2" opacity=".75"/>
+  <text x="64" y="112" fill="#fff3dc" font-family="Georgia,serif" font-size="17" letter-spacing="7">AGAU ÉDITIONS</text>
+  <text x="64" y="328" fill="#173f50" font-family="Georgia,serif" font-size="49" font-weight="bold">Les Pirogues</text>
+  <text x="64" y="388" fill="#173f50" font-family="Georgia,serif" font-size="49" font-weight="bold">de l'aube</text>
+  <path d="M64 418h120" stroke="#fff0d5" stroke-width="3"/>
+  <text x="64" y="811" fill="#fff3dc" font-family="Arial,sans-serif" font-size="20" letter-spacing="2">JEAN-BAPTISTE KONAN</text>
+</svg>
