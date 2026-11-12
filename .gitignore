@@ -29,3 +29,11 @@ Homestead.json
 .phpactor.json
 auth.json
 # public/build/
+
+# Fichiers secrets et environnement de l'agent IA
+agent-ia/.env
+
+# Environnement virtuel Python
+agent-ia/venv/
+agent-ia/__pycache__/
+agent-ia/**/__pycache__/

@@ -7,10 +7,10 @@
         border: 0;
         border-radius: 999px;
         padding: 14px 20px;
-        background: #1B6CA8;
-        color: #fff;
+        background: #1E3A8A;
+        color: #F3EADB;
         font-weight: 700;
-        box-shadow: 0 8px 24px rgba(15, 74, 122, .25);
+        box-shadow: 0 8px 24px rgba(30, 58, 138, .2);
         cursor: pointer;
     }
 
@@ -24,10 +24,10 @@
         height: min(520px, calc(100vh - 120px));
         flex-direction: column;
         overflow: hidden;
-        border: 1px solid #dce5ed;
-        border-radius: 14px;
-        background: #fff;
-        box-shadow: 0 12px 40px rgba(15, 48, 80, .2);
+        border: 1px solid #E3D5BC;
+        border-radius: 16px;
+        background: #FBF7F0;
+        box-shadow: 0 12px 40px rgba(30, 41, 59, .18);
     }
 
     .catalogue-assistant-panel[hidden] {
@@ -38,45 +38,66 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 16px;
+        gap: 12px;
+        padding: 14px 16px;
+        border-bottom: 2px solid #F3EADB;
         background: #0F4A7A;
-        color: #fff;
+        color: #F3EADB;
+    }
+
+    .catalogue-assistant-title {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        gap: 10px;
+        font-size: 1rem;
+        line-height: 1.3;
     }
 
     .catalogue-assistant-close {
+        flex: 0 0 auto;
         border: 0;
         background: transparent;
-        color: inherit;
-        font-size: 1.5rem;
+        color: #F3EADB;
+        font-size: 1.75rem;
+        line-height: 1;
         cursor: pointer;
     }
 
     .catalogue-assistant-messages {
         display: flex;
         flex: 1;
+        min-height: 0;
         flex-direction: column;
         gap: 10px;
         overflow-y: auto;
+        margin: 0;
         padding: 16px;
+        background: #FBF7F0;
         list-style: none;
     }
 
     .catalogue-assistant-message {
         max-width: 90%;
+        border: 1px solid #E3D5BC;
         border-radius: 12px;
         padding: 10px 12px;
-        background: #f0f4f8;
+        background: #F1E8D8;
+        color: #3B2F2A;
         white-space: pre-wrap;
         overflow-wrap: anywhere;
     }
 
     .catalogue-assistant-message.is-user {
         align-self: flex-end;
-        background: #e7f2fa;
+        border-color: transparent;
+        background: #1D4ED8;
+        color: #fff;
     }
 
     .catalogue-assistant-form {
         display: flex;
+        flex: 0 0 auto;
         gap: 8px;
         padding: 12px;
         border-top: 1px solid #e5eaf0;
@@ -85,16 +106,22 @@
     .catalogue-assistant-form input {
         min-width: 0;
         flex: 1;
-        border: 1px solid #cbd5df;
-        border-radius: 8px;
+        border: 1px solid #E3D5BC;
+        border-radius: 10px;
         padding: 10px;
+    }
+
+    .catalogue-assistant-form input:focus {
+        border-color: #1E3A8A;
+        outline: 2px solid rgba(30, 58, 138, .15);
+        outline-offset: 1px;
     }
 
     .catalogue-assistant-form button {
         border: 0;
-        border-radius: 8px;
+        border-radius: 10px;
         padding: 10px 14px;
-        background: #1B6CA8;
+        background: #1E3A8A;
         color: #fff;
         font-weight: 700;
         cursor: pointer;
@@ -106,9 +133,26 @@
     }
 
     .catalogue-assistant-privacy {
-        padding: 0 12px 10px;
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 0 10px 6px;
         color: #64748b;
-        font-size: .72rem;
+        font-size: .65rem;
+        line-height: 1.2;
+    }
+
+    @media (max-width: 480px) {
+        .catalogue-assistant-launcher {
+            right: 16px;
+            bottom: 16px;
+        }
+
+        .catalogue-assistant-panel {
+            right: 12px;
+            bottom: 76px;
+            width: calc(100vw - 24px);
+            height: min(520px, calc(100dvh - 96px));
+        }
     }
 </style>
 
@@ -122,9 +166,9 @@
     Une question sur nos livres ?
 </button>
 
-<section class="catalogue-assistant-panel" id="catalogue-assistant-panel" aria-label="Assistant AGAU Éditions" hidden>
+<section class="catalogue-assistant-panel" id="catalogue-assistant-panel" aria-label="Assistant AGAU ÉDITIONS" hidden>
     <div class="catalogue-assistant-header">
-        <strong>Assistant AGAU Éditions</strong>
+        <strong class="catalogue-assistant-title">Assistant AGAU ÉDITIONS</strong>
         <button type="button" class="catalogue-assistant-close" id="catalogue-assistant-close" aria-label="Fermer">&times;</button>
     </div>
     <ol class="catalogue-assistant-messages" id="catalogue-assistant-messages" aria-live="polite">
@@ -132,10 +176,10 @@
     </ol>
     <form class="catalogue-assistant-form" id="catalogue-assistant-form">
         <label for="catalogue-assistant-input" class="sr-only">Votre question</label>
-        <input id="catalogue-assistant-input" name="message" maxlength="1000" required autocomplete="off" placeholder="Écrivez votre question…">
+        <input id="catalogue-assistant-input" name="message" maxlength="500" required autocomplete="off" placeholder="Écrivez votre question…">
         <button type="submit">Envoyer</button>
     </form>
-    <p class="catalogue-assistant-privacy">Les messages ne sont pas enregistrés par AGAU Éditions. Ils sont transmis à OpenAI pour générer la réponse; évitez d’inclure des informations personnelles.</p>
+    <p class="catalogue-assistant-privacy">Vos messages sont transmis à un service d'intelligence artificielle pour générer la réponse. Évitez d'inclure des informations personnelles.</p>
 </section>
 
 <script>
@@ -146,6 +190,7 @@
         const form = document.getElementById('catalogue-assistant-form');
         const input = document.getElementById('catalogue-assistant-input');
         const messages = document.getElementById('catalogue-assistant-messages');
+        const conversationHistory = [];
 
         if (!launcher || !panel || !closeButton || !form || !input || !messages) {
             return;
@@ -188,27 +233,51 @@
             input.value = '';
             const submitButton = form.querySelector('button[type="submit"]');
             submitButton.disabled = true;
+            const previousHistory = conversationHistory.slice(-6).map(function (entry) {
+                return {
+                    role: entry.role,
+                    content: entry.content.slice(-500)
+                };
+            });
+            const typingIndicator = document.createElement('li');
+            typingIndicator.className = 'catalogue-assistant-message';
+            typingIndicator.textContent = "L'assistant écrit...";
+            messages.appendChild(typingIndicator);
+            messages.scrollTop = messages.scrollHeight;
 
             try {
-                const response = await fetch(@json(route('public-assistant.ask')), {
+                const response = await fetch(@json(route('assistant.chat', [], false)), {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json',
                         'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
                     },
-                    body: JSON.stringify({ message: message })
+                    body: JSON.stringify({
+                        message: message,
+                        historique: previousHistory
+                    })
                 });
-                const result = await response.json();
 
                 if (!response.ok) {
-                    throw new Error(result.message || 'La demande n’a pas pu être traitée.');
+                    throw new Error('La demande n’a pas pu être traitée.');
                 }
 
-                addMessage(result.answer, false);
+                const result = await response.json();
+                if (typeof result.reponse !== 'string' || !result.reponse.trim()) {
+                    throw new Error('La réponse de l’assistant est indisponible.');
+                }
+
+                addMessage(result.reponse, false);
+                conversationHistory.push(
+                    { role: 'user', content: message },
+                    { role: 'assistant', content: result.reponse }
+                );
+                conversationHistory.splice(0, Math.max(0, conversationHistory.length - 6));
             } catch (error) {
-                addMessage(error.message || 'L’assistant est momentanément indisponible. Réessayez plus tard.', false);
+                addMessage('L’assistant est momentanément indisponible, réessayez plus tard.', false);
             } finally {
+                typingIndicator.remove();
                 submitButton.disabled = false;
                 input.focus();
             }

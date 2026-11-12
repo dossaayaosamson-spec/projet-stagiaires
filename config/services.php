@@ -47,5 +47,8 @@ return [
     'django' => [
         'url' => env('DJANGO_API_URL', 'https://agaueditions-ia.saeicubetech.com'),
     ],
+    'agent' => [
+        'url' => env('AGENT_URL', 'http://127.0.0.1:8001'),
+    ],
 
 ];

@@ -1,0 +1,9 @@
+.env
+**/.env
+.git
+/vendor
+/node_modules
+/public/build
+/agent-ia/venv
+**/__pycache__
+/database/database.sqlite

@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\ShortStoryController;
 use App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\UserSuspensionController;
+use App\Http\Controllers\AssistantController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AuthorAIController;
 use App\Http\Controllers\AuthorApplicationController;
@@ -59,6 +60,9 @@ Route::get('/clear-cache', function () {
 Route::get('/', [PageController::class, 'welcome'])->name('home');
 Route::get('/catalogue', [FrontController::class, 'catalogue'])->name('front.catalogue');
 Route::get('/livres/{id}/{slug?}', [FrontController::class, 'showBook'])->name('front.livres.show');
+Route::post('/assistant/chat', [AssistantController::class, 'chat'])
+    ->middleware('throttle:10,1')
+    ->name('assistant.chat');
 Route::post('/assistant/catalogue', PublicCatalogueAssistantController::class)
     ->middleware('throttle:10,1')
     ->name('public-assistant.ask');

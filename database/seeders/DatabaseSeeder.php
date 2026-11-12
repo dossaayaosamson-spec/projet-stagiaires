@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+use Symfony\Component\Console\Formatter\OutputFormatter;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,11 +25,27 @@ class DatabaseSeeder extends Seeder
             SubscriptionPlanSeeder::class,
         ]);
 
-        User::factory()->create([
+        $adminPassword = env('ADMIN_PASSWORD');
+
+        if (! $adminPassword) {
+            $adminPassword = Str::password(32);
+
+            if (isset($this->command)) {
+                $this->command->getOutput()->writeln(
+                    'Mot de passe administrateur généré : '.OutputFormatter::escape($adminPassword),
+                );
+            }
+        }
+
+        User::create([
             'prenom' => 'Admin',
             'nom_famille' => 'AGAU',
             'email' => 'admin@agau.com',
-            'password' => bcrypt('password'),
+            'telephone' => null,
+            'pays' => null,
+            'email_verified_at' => now(),
+            'password' => $adminPassword,
+            'newsletter' => false,
             'role' => 'admin',
         ]);
     }
